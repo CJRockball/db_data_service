@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.main import tips
+from api.main import tips
 
 
 app = FastAPI()
