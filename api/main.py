@@ -41,7 +41,8 @@ async def favicon():
 @tips.get("/")
 async def index_get():
     logging.info("Opened index page")
-    return {'message':'hello world tips'}
+    return {'/':'hello world', '/test_data':'Returns all test data from the db',
+            '/train_data': 'Returns all train data from db','/get_random_test_data':'returns random row from test data'}
 
 
 @tips.get("/test_data", response_model=List[TipsData])
